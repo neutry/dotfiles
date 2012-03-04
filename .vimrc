@@ -1,3 +1,22 @@
+set nocompatible
+filetype off
+
+set rtp+=~/.vim/vundle.git/
+call vundle#rc()
+
+" original repos on github
+" Bundle 'tpope/vim-fugitive'
+Bundle 'Shougo/neocomplcache.git'
+Bundle 'mattn/zencoding-vim.git'
+
+" vim-scripts repos
+" Bundle 'rails.vim'
+
+" non github repos
+" Bundle 'git://git.wincent.com/command-t.git'
+
+filetype plugin indent on
+
 " ----------------------------
 " Encoding
 " ----------------------------
