@@ -8,6 +8,7 @@ call vundle#rc()
 " Bundle 'tpope/vim-fugitive'
 Bundle 'Shougo/neocomplcache.git'
 Bundle 'mattn/zencoding-vim.git'
+Bundle 'scrooloose/syntastic.git'
 
 " vim-scripts repos
 " Bundle 'rails.vim'
