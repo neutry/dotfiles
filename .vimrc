@@ -1,20 +1,12 @@
-set nocompatible
+set nocompatible            " Vi互換モードオフ
 filetype off
 
 set rtp+=~/.vim/vundle.git/
 call vundle#rc()
 
-" original repos on github
-" Bundle 'tpope/vim-fugitive'
 Bundle 'Shougo/neocomplcache.git'
 Bundle 'mattn/zencoding-vim.git'
 Bundle 'scrooloose/syntastic.git'
-
-" vim-scripts repos
-" Bundle 'rails.vim'
-
-" non github repos
-" Bundle 'git://git.wincent.com/command-t.git'
 
 filetype plugin indent on
 
@@ -24,7 +16,6 @@ filetype plugin indent on
 " set encoding=utf-8
 " set fileencodings=ucs-bom,utf-8,iso-2022-jp,sjis,cp932,euc-jp,cp20932
 
-set nocompatible            " Vi互換モードオフ
 set clipboard=unnamed,autoselect       " クリップボードを利用
 source $VIMRUNTIME/mswin.vim
 
