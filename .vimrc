@@ -4,6 +4,8 @@ filetype off
 set rtp+=~/.vim/vundle.git/
 call vundle#rc()
 
+Bundle 'gmarik/vundle'
+
 Bundle 'Shougo/neocomplcache.git'
 Bundle 'mattn/zencoding-vim.git'
 Bundle 'scrooloose/syntastic.git'
