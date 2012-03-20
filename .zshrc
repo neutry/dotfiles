@@ -1,5 +1,3 @@
-# users generic .zshrc file for zsh(1)
-
 ## Environment variable configuration
 #
 # LANG
@@ -12,6 +10,11 @@ case ${UID} in
 esac
 
 ## PATH
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+
+export PATH=$PATH:/opt/local/bin:/opt/local/sbin/
+export MANPATH=$MANPATH:/opt/local/man
+
 export PATH=$PATH:$HOME/bin
 export PATH=$PATH:/sbin
 export PATH=$PATH:/usr/sbin
@@ -92,7 +95,6 @@ setopt noautoremoveslash
 #
 setopt nolistbeep
 
-
 ## Keybind configuration
 #
 # emacs like keybind (e.x. Ctrl-a gets to line head and Ctrl-e gets
@@ -117,7 +119,6 @@ bindkey "\\en" history-beginning-search-forward-end
 #
 bindkey "\e[Z" reverse-menu-complete
 
-
 ## Command history configuration
 #
 HISTFILE=${HOME}/.zsh_history
@@ -126,24 +127,20 @@ SAVEHIST=50000
 setopt hist_ignore_dups     # ignore duplication command history list
 setopt share_history        # share command history data
 
-
 ## Completion configuration
 #
 fpath=(${HOME}/.zsh/functions/Completion ${fpath})
 autoload -U compinit
 compinit
 
-
 ## zsh editor
 #
 autoload zed
-
 
 ## Prediction configuration
 #
 #autoload predict-on
 #predict-off
-
 
 ## Alias configuration
 #
@@ -171,7 +168,6 @@ alias du="du -h"
 alias df="df -h"
 
 alias su="su -l"
-
 
 ## terminal configuration
 #
@@ -219,23 +215,13 @@ xterm|xterm-color|kterm|kterm-color)
     ;;
 esac
 
-
 ## load user .zshrc configuration file
 #
 [ -f ${HOME}/.zshrc.mine ] && source ${HOME}/.zshrc.mine
-
-
 
 # predict-on
 autoload predict-on
 predict-on
 
-
-
-
-
-
-
 setopt nonomatch
 
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
