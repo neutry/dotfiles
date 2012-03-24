@@ -44,7 +44,7 @@ highlight Folded ctermfg=blue
 set number                  " 行番号表示
 set list                    " タブ文字、行末など不可視文字を表示する
 set listchars=eol:$,tab:>\ ,extends:<   " listで表示される文字のフォーマットを指定する
-set cursorline              " カーソル行をハイライト
+"set cursorline              " カーソル行をハイライト
 set showmatch               " 閉じ括弧が入力されたとき、対応する括弧を表示する
 set ruler                   " ルーラー（右下の行,列番号）表示
 set showmode                " モード表示
