@@ -175,7 +175,7 @@ endif
 " オートコマンド設定 
 " ----------------------------
 " ウィンドウを最大化して起動
-au GUIEnter * simalt ~x
+"au GUIEnter * simalt ~x
 
 " 入力モード時、ステータスラインのカラーを変更
 augroup InsertHook
