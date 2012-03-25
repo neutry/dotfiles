@@ -6,7 +6,7 @@ call vundle#rc()
 
 Bundle 'gmarik/vundle'
 
-Bundle 'Shougo/neocomplcache.git'
+Bundle 'shougo/neocomplcache.git'
 Bundle 'mattn/zencoding-vim.git'
 Bundle 'scrooloose/syntastic.git'
 
@@ -19,7 +19,7 @@ filetype plugin indent on
 " set fileencodings=ucs-bom,utf-8,iso-2022-jp,sjis,cp932,euc-jp,cp20932
 
 set clipboard=unnamed,autoselect       " クリップボードを利用
-source $VIMRUNTIME/mswin.vim
+"source $VIMRUNTIME/mswin.vim
 
 " ----------------------------
 " Backup
