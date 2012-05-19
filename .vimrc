@@ -1,9 +1,11 @@
+" vundle
 set nocompatible            " Vi互換モードオフ
 filetype off
 
-set rtp+=~/.vim/vundle.git/
+set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
+Bundle 'gmarik/vundle'
 Bundle 'Shougo/neocomplcache.git'
 Bundle 'mattn/zencoding-vim.git'
 Bundle 'scrooloose/syntastic.git'
@@ -22,10 +24,12 @@ set clipboard=unnamed,autoselect       " クリップボードを利用
 " ----------------------------
 " Backup
 " ----------------------------
-set backupdir=$HOME/vimbackup   " バックアップファイルを作るディレクトリ
+set nobackup
+"set backupdir=$HOME/vimbackup   " バックアップファイルを作るディレクトリ
 set browsedir=buffer            " ファイル保存ダイアログの初期ディレクトリをバッファファイル位置に設定
 set clipboard=unnamed           " クリップボードをWindowsと連携
-set directory=$HOME/vimbackup   " "スワップファイル用のディレクトリ
+set noswapfile
+"set directory=$HOME/vimbackup   " スワップファイル用のディレクトリ
 
 " ----------------------------
 " Color
@@ -40,14 +44,14 @@ highlight Folded ctermfg=blue
 " Disp
 " ----------------------------
 set number                  " 行番号表示
-set list                    " タブ文字、行末など不可視文字を表示する
-set listchars=eol:$,tab:>\ ,extends:<   " listで表示される文字のフォーマットを指定する
+set list                    " タブ文字、行末など不可視文字を表示
+set listchars=eol:$,tab:>\ ,trail:~,extends:<   " listで表示される文字のフォーマットを指定
 "set cursorline              " カーソル行をハイライト
-set showmatch               " 閉じ括弧が入力されたとき、対応する括弧を表示する
+set showmatch               " 閉じ括弧が入力されたとき、対応する括弧を表示
 set ruler                   " ルーラー（右下の行,列番号）表示
 set showmode                " モード表示
 set title                   " 編集中のファイル名を表示
-set showcmd                 " 入力中のコマンドをステータスに表示する
+set showcmd                 " 入力中のコマンドをステータスに表示
 set laststatus=2            " ステータスラインを常に表示
 set statusline=%<%f\ %m%r%h%w%{'['.(&fenc!=''?&fenc:&enc).']['.&ff.']'}%=%l,%c%V%8P])]}
 
@@ -56,7 +60,7 @@ set statusline=%<%f\ %m%r%h%w%{'['.(&fenc!=''?&fenc:&enc).']['.&ff.']'}%=%l,%c%V
 " ----------------------------
 set autoindent smartindent  " オートインデント
 set whichwrap=b,s,h,l,<,>,[,]   " カーソルを行頭、行末で止まらないようにする
-set expandtab               " タブをスペースに変換する
+set expandtab               " タブをスペースに変換
 set hidden                  " 変更中のファイルでも、保存しないで他のファイルを表示
 set smarttab                " 行頭の余白内でTabで'shiftwidth'の数だけインデント
 set shiftwidth=4            " シフト移動幅
@@ -170,7 +174,7 @@ if exists('&ambiwidth')
 endif
 
 " ----------------------------
-" オートコマンド設定 
+" オートコマンド設定
 " ----------------------------
 " ウィンドウを最大化して起動
 "au GUIEnter * simalt ~x
@@ -186,14 +190,8 @@ augroup END
 au BufNewFile,BufRead * set iminsert=0
 " タブ幅をリセット
 au BufNewFile,BufRead * set tabstop=4 shiftwidth=4
-
 " .txtファイルで自動的に日本語入力ON
 au BufNewFile,BufRead *.txt set iminsert=2
-" .rhtmlと.rbでタブ幅を変更
-au BufNewFile,BufRead *.rhtml   set nowrap tabstop=2 shiftwidth=2
-au BufNewFile,BufRead *.rb  set nowrap tabstop=2 shiftwidth=2
-
 " 全角スペースを視覚化
 highlight ZenkakuSpace cterm=underline ctermfg=lightblue guibg=#666666
 au BufNewFile,BufRead * match ZenkakuSpace /　/
-
