@@ -43,9 +43,10 @@ highlight Folded ctermfg=blue
 " ----------------------------
 " Disp
 " ----------------------------
+set ambiwidth=double
 set number                  " 行番号表示
 set list                    " タブ文字、行末など不可視文字を表示
-set listchars=eol:$,tab:>\ ,trail:~,extends:<   " listで表示される文字のフォーマットを指定
+set listchars=eol:¬,tab:>-,trail:~,extends:<   " listで表示される文字のフォーマットを指定
 "set cursorline              " カーソル行をハイライト
 set showmatch               " 閉じ括弧が入力されたとき、対応する括弧を表示
 set ruler                   " ルーラー（右下の行,列番号）表示
@@ -106,9 +107,9 @@ set hlsearch                " 検索文字をハイライト
 
 " zencoding
 let g:user_zen_expandabbr_key = '<c-e>'
-let g:use_zen_complete_tag = 1
 let g:user_zen_settings = {
-\    'lang' : 'ja',
+\'lang':'ja',
+\'indentation':'    ',
 \}
 
 " neocomplcache
