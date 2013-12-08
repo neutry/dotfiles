@@ -7,7 +7,7 @@ call vundle#rc()
 
 Bundle 'gmarik/vundle'
 Bundle 'Shougo/neocomplcache.git'
-Bundle 'mattn/zencoding-vim.git'
+Bundle 'mattn/emmet-vim.git'
 Bundle 'scrooloose/syntastic.git'
 
 filetype plugin indent on
@@ -105,11 +105,10 @@ set hlsearch                " 検索文字をハイライト
 " Plugin
 " ---------------------------
 
-" zencoding
-let g:user_zen_expandabbr_key = '<c-e>'
-let g:user_zen_settings = {
+" emmet
+let g:user_emmet_settings = {
 \'lang':'ja',
-\'indentation':'    ',
+\'indentation':'  ',
 \}
 
 " neocomplcache
