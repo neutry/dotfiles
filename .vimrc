@@ -114,6 +114,9 @@ let g:user_emmet_settings = {
 " neocomplcache
 let g:neocomplcache_enable_at_startup = 1 " 起動時に有効化
 
+" syntastic
+let g:syntastic_html_tidy_ignore_errors=[" proprietary attribute \"ng-"]
+
 " ----------------------------
 " 文字コードの自動認識
 " ----------------------------
